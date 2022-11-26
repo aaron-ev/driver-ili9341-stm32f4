@@ -4,6 +4,7 @@
 #include "stm32f4xx_hal.h"
 #include <stdint.h>
 #include "fonts.h"
+#include "appConfig.h"
 
 /* @GPIO definitions */
 #define TFT_GPIOA                           GPIOA
@@ -15,7 +16,7 @@
 #define TFT_GPIOG                           GPIOG
 #define TFT_GPIOH                           GPIOH
 
-/* @Pin definitions */ 
+/* @Pin definitions */
 #define TFT_PIN0                            GPIO_PIN_0
 #define TFT_PIN1                            GPIO_PIN_1
 #define TFT_PIN2                            GPIO_PIN_2
@@ -68,7 +69,7 @@
 */
 
 /*
-    Default settings: 
+    Default settings:
     CS    --> PB3
     RESET --> PB5
     DC    --> PB6

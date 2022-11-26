@@ -64,6 +64,16 @@ static void tft_ili9341_set_window(uint16_t x_col, uint16_t y_col, uint16_t x_pa
 void tft_ili9341_draw_pixel(uint16_t x, uint16_t y, Color eColor);
 void tft_ili9341_fill_screen(Color eColor);
 
+void ili9341_backLightOn(void)
+{
+    HAL_GPIO_WritePin(BACKLIGHT_PORT, BACKLIGHT_GPIO_PIN, GPIO_PIN_SET);
+}
+
+void ili9341_backLightOff(void)
+{
+    HAL_GPIO_WritePin(BACKLIGHT_PORT, BACKLIGHT_GPIO_PIN, GPIO_PIN_RESET);
+}
+
 void tft_ili93241_select_chip(void)
 {
     HAL_GPIO_WritePin(TFT_CS_PORT, TFT_CS_PIN_NUM, GPIO_PIN_RESET);
